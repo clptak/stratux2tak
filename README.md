@@ -105,10 +105,8 @@ Using one of the 3 ways to connect to your RPi, use the default login credential
 Now would be a good time to satisfy the following tasks prior to configuring your RPi.  The easiest method to achieve the previous task is to enter raspi-config and use the user interface following the instructions below.  However, command line interface options, where applicable, are also provided below:
 
 > It is **HIGHLY** recommended to change your password (#1) and hostname (#2) along with setting your timezone to UTC (#3) when using a TAKServer or multicast to ATAK EUD's
-{.is-warning}
 
-> Before proceeding and after you enter ssh or terminal, you must unlock the layer if you want your changes to persist.  **Enter**  `sudo overlayctl unlock` at the first terminal prompt.
-{.is-danger}
+> **IMPORTANT !!!** Before proceeding and after you enter ssh or terminal, you must unlock the layer if you want your changes to persist.  **Enter**  `sudo overlayctl unlock` at the first terminal prompt.
 
 See for more info:  https://github.com/b3nn0/stratux/wiki/Read-only-filesystem
 
@@ -119,9 +117,9 @@ You have two options:
 - **A. Raspi-Config**
   1. From the command prompt, enter raspi-config:  `sudo raspi-config`
   2. Select 1. System Options
-  ![raspi-config_01.png](assets/Raspi-Config_01.png){.align-left}
+  	![raspi-config_01.png](assets/Raspi-Config_01.png){.align-left}
   3. Select S3 Password
-  ![raspi-config_02.png](assets/Raspi-Config_02.png)
+  	![raspi-config_02.png](assets/Raspi-Config_02.png)
   4. Enter and Re-type your new password at the command prompt
 - **B. Command line:**
   1. Switch user to root:  `sudo su -`
@@ -140,9 +138,9 @@ Retype new UNIX password: [re-enter your password here]
 
 1. From the command prompt, enter raspi-config:  `sudo raspi-config`
 2. Select `1. System Options`
-![raspi-config_03.png](assets/Raspi-Config_03.png)
+	![raspi-config_03.png](assets/Raspi-Config_03.png)
 3. Select `S4 Hostname`
-![raspi-config_04.png](assets/Raspi-Config_04.png)
+	![raspi-config_04.png](assets/Raspi-Config_04.png)
 4. Follow the command prompts
 
 ##### 3.  Change Timezone to UTC - RECOMMENDED**
