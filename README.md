@@ -20,7 +20,6 @@ The following are parts utilized for a successful implementation of Stratux feed
     - [Nooelec Dual Band NESDRs](https://www.amazon.com/gp/product/B076GWF6FF/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1) - See [here](http://stratux.me/#diy-kits-and-parts) for alternative SDR's TESTED
     
 >    Both 1090 and 978 SDRs are required for Stratux to operate.
-{.is-warning}
 
 3. sD Card with Stratux / Raspbian OS flashed onto it.  [Stratux Image](http://stratux.me) is located [here](https://github.com/cyoung/stratux/releases/download/v1.6r1-eu27-us/stratux-v1.6r1-eu027-3d07b461-us.img.zip): 
 ([https://github.com/cyoung/stratux/releases/download/v1.6r1-eu27-us/stratux-v1.6r1-eu027-3d07b461-us.img.zip](https://github.com/cyoung/stratux/releases/download/v1.6r1-eu27-us/stratux-v1.6r1-eu027-3d07b461-us.img.zip))
@@ -117,9 +116,13 @@ You have two options:
 - **A. Raspi-Config**
   1. From the command prompt, enter raspi-config:  `sudo raspi-config`
   2. Select 1. System Options
-  	![raspi-config_01.png](assets/Raspi-Config_01.png){.align-left}
+
+  	![raspi-config_01.png](assets/Raspi-Config_01.png)
+
   3. Select S3 Password
+
   	![raspi-config_02.png](assets/Raspi-Config_02.png)
+
   4. Enter and Re-type your new password at the command prompt
 - **B. Command line:**
   1. Switch user to root:  `sudo su -`
@@ -138,32 +141,49 @@ Retype new UNIX password: [re-enter your password here]
 
 1. From the command prompt, enter raspi-config:  `sudo raspi-config`
 2. Select `1. System Options`
+
 	![raspi-config_03.png](assets/Raspi-Config_03.png)
+
 3. Select `S4 Hostname`
+
 	![raspi-config_04.png](assets/Raspi-Config_04.png)
+
 4. Follow the command prompts
 
 ##### 3.  Change Timezone to UTC - RECOMMENDED**
 
 1. From the command prompt, enter raspi-config:  `sudo raspi-config`
 2. Select `5. Localisation Options`
+
     ![raspi-config_05.png](assets/Raspi-Config_05.png)
+
 3. Select `L2 Timezone`
+
     ![raspi-config_06.png](assets/Raspi-Config_06.png)
+
 4. Select None of the above at the bottom
+
     ![raspi-config_07.png](assets/Raspi-Config_07.png)
+
 5. Select UTC and tab to `Ok` and click 'return'
+
     ![raspi-config_08.png](assets/Raspi-Config_08.png)
 
 ##### 4. Change "Localisation / Locale" settings.(Optional)
 
 1. From the command prompt, enter raspi-config:  `sudo raspi-config`
 2. Select `5. Localisation Options`
+
     ![raspi-config_05.png](assets/Raspi-Config_05.png)
+
 3. Select `L1 Locale`:
+
     ![raspi-config_09.png](assets/Raspi-Config_09.png)
+
 4. Scroll down and select your local (NOTE:  For U.S. users, select **en_US.UTF-8 UTF-8**)
+
    ![raspi-config_10.png](assets/Raspi-Config_10.png)
+
 5. Follow the command prompts.
 
 After making the previous changes, exit `raspi-config` and type `sudo reboot` if not already prompted to do so by `raspi-config` upon exit.
@@ -384,7 +404,7 @@ network={
 }
 ```
 
-After ensuring your information is correct, save the file and reboot the RPi at the command prompt:  `sudo reboot` .  Upon reboot, you should be able ssh into your stratux device.  [Skip to Install Stratuxcot and Dependencies](https://www.notion.so/Stratux-Mobile-Station-Set-up-05d2376dca99435691575a2a13c5dcce).
+After ensuring your information is correct, save the file and reboot the RPi at the command prompt:  `sudo reboot` .  Upon reboot, you should be able ssh into your stratux device.  [Skip to Install Stratuxcot and Dependencies](## Install StratuxCoT).
 
 > **REMINDER:**  The configuration provided previously serve only to provide an initial configuration for a StratuX / Stratuxcot implementation.  Please refer to the previous sources / links to further secure your network for your application.
 
@@ -392,21 +412,21 @@ After ensuring your information is correct, save the file and reboot the RPi at 
 
 If you are unable to ssh into stratux on your WiFi network after confirming the correct IP address, network information, and 2.4G status, then connect your RPi 3 to a keyboard and monitor and re-enable ssh by going into raspi-config:`sudo raspi-config`, and reboot.
 
-Refer to Greg Albrecht's [stratuxcot site](https://github.com/ampledata/stratuxcot), from which the information below was obtained:
+Refer to Greg Albrecht's [stratuxcot site](https://github.com/snstac/stratuxcot), from which the information below was obtained:
 
 ## Install StratuxCoT
 Copy / Paste or type each line in order to install StratuXCoT
 ```bash
-wget https://github.com/ampledata/aircot/releases/latest/download/python3-aircot_latest_all.deb
+wget https://github.com/snstac/aircot/releases/latest/download/python3-aircot_latest_all.deb
 sudo apt install -f ./python3-aircot_latest_all.deb
-wget https://github.com/ampledata/pytak/releases/latest/download/python3-pytak_latest_all.deb
+wget https://github.com/snstac/pytak/releases/latest/download/python3-pytak_latest_all.deb
 sudo apt install -f ./python3-pytak_latest_all.deb
-wget https://github.com/ampledata/stratuxcot/releases/latest/download/python3-stratuxcot_latest_all.deb
+wget https://github.com/snstac/stratuxcot/releases/latest/download/python3-stratuxcot_latest_all.deb
 sudo apt install -f ./python3-stratuxcot_latest_all.deb
 ```
 ## Start stratuxcot
 
-Refer to Greg Albrecht's [stratuxcot site](https://github.com/ampledata/stratuxcot), from which the information below was obtained:
+Refer to Greg Albrecht's [stratuxcot site](https://github.com/snstac/stratuxcot), from which the information below was obtained:
 
 ### **Usage**
 
@@ -498,9 +518,13 @@ The simplest way:  ([http://cagewebdev.com/raspberry-pi-expanding-the-root-parti
 1. open the PI’s configuration screen (in the terminal window) by typing:
 `sudo raspi-config`
 2. Select ***`6 Advanced Options`***
+
     ![raspi-config_01.png](assets/Raspi-Config_01.png)
+
 3. Select `A1 Expand filesystem`
+
     ![raspi-config_11.png](assets/Raspi-Config_11.png)
+
 4. Click "Yes" to reboot.
 
 The following is an alternate way that has worked if the previous link does not.
