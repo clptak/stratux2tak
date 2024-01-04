@@ -1,5 +1,5 @@
 # stratux2tak
-Stratux image build to include snstak/stratuxcot and stratux image to feed detected aircraft positions to Team Awareness Devices.
+Stratux image build to include snstac/stratuxcot and stratux image to feed detected aircraft positions to Team Awareness Devices.
 
 ## Summary
 
